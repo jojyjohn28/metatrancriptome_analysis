@@ -1,14 +1,10 @@
-## Metatranscriptomics — From Raw RNA → Biology 🧬
+# Metatranscriptomics — From Raw RNA → Biology 🧬
 
 ### A 5-Day Metatranscriptomics Learning Series
 
-This repository accompanies a **5-day blog series on metatranscriptomics**, guiding you from raw RNA sequencing reads to biological interpretation of microbial activity.
+This repository accompanies a **5-day blog series on metatranscriptomics**, guiding you from raw RNA sequencing reads to biological interpretation of microbial community activity. Each day focuses on a key step in the workflow, with detailed blog explanations, reproducible scripts, and toy datasets for quick testing.
 
-Each day focuses on a key step in the workflow, with:
-
-- 📘 Detailed blog explanations
-- 💻 Reproducible scripts
-- 📦 Toy datasets for quick testing
+📘 **Full blog series:** https://jojyjohn28.github.io/series/metatranscriptome/
 
 ---
 
@@ -16,55 +12,71 @@ Each day focuses on a key step in the workflow, with:
 
 By the end of this series, you will be able to:
 
-- Perform RNA-seq quality control
-- Understand reference selection (MAGs vs genomes)
-- Map metatranscriptomic reads
-- Quantify gene expression
-- Interpret expression data in an ecological context
+- Perform RNA-seq quality control and rRNA removal
+- Choose the right reference strategy (MAGs vs. reference genomes vs. gene catalogs)
+- Map metatranscriptomic reads with Bowtie2 and process alignments with SAMtools
+- Quantify gene expression using featureCounts
+- Normalize and interpret expression data in an ecological context (TPM, DESeq2, DNA:RNA ratios)
 
 ---
 
 ## 📁 Repository Structure
 
-├── Day1/
-│ ├── toy_data/
-│ └── README.md
-├── Day2/
-│ ├── scripts/
-│ └── README.md
-├── Day3/
-│ ├── scripts/
-│ └── README.md
-├── Day4/
-│ ├── scripts/
-│ └── README.md
-├── Day5/
-│ ├── scripts/
-│ └── README.md
+```
+.
+├── Day1_Introduction/
+│   ├── toy_data/
+│   └── README.md
+├── Day2_QC_Preprocessing/
+│   ├── scripts/
+│   └── README.md
+├── Day3_Reference_Strategy/
+│   ├── scripts/
+│   └── README.md
+├── Day4_Mapping_Quantification/
+│   ├── scripts/
+│   └── README.md
+├── Day5_Counts_to_Biology/
+│   ├── scripts/
+│   └── README.md
 └── README.md
+```
 
-**Replace with your own data later**
+> Toy datasets are provided for learning purposes. Replace input paths with your own data when adapting to your project.
+
+---
+
+## 🧰 Tools Used
+
+| Tool                    | Purpose                              |
+| ----------------------- | ------------------------------------ |
+| FastQC / fastp          | Quality control and adapter trimming |
+| SortMeRNA / bbduk       | rRNA removal                         |
+| Bowtie2                 | Read mapping                         |
+| SAMtools                | SAM/BAM processing                   |
+| featureCounts (Subread) | Gene-level quantification            |
+| DESeq2 (R)              | Differential expression analysis     |
 
 ---
 
 ## 📢 Notes
 
-- Paths are simplified for clarity
-- HPC (SLURM) versions can be adapted if needed
+- All paths are simplified for clarity; adapt to your HPC directory structure as needed
+- SLURM batch scripts are included for HPC users (Palmetto cluster examples)
+- This is an actively maintained repository — scripts and data will be updated as the series progresses
 
 ---
 
 ## 🤝 Acknowledgment
 
-I acknowldege my PI Dr. Barbara Campbell for giving all the support while learning and implementing it in my daily analysis.
+I thank my PI, **Dr. Barbara Campbell**, for her continued support and guidance while learning and implementing metatranscriptomics analysis in our daily research.
 
-## ⭐ If this helped you
+---
 
-Consider starring the repo or sharing it with others learning metatranscriptomics!
+## ⭐ Found this helpful?
 
-**Full detailed bolg post can be acessed from**
-📘 Full blog series: https://jojyjohn28.github.io/series/metatranscriptome/
+Consider starring the repository or sharing it with others learning metatranscriptomics. Feedback and contributions are welcome.
 
-Last updated Mar 30, 2026
-Still ongoing project.
-This file will be updated to its full form at the end of this project.
+---
+
+_Last updated: March 30, 2026_
