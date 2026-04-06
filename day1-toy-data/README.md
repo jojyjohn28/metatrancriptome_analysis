@@ -39,3 +39,7 @@ This toy dataset is designed for:
 ■ Demonstrating common challenges (e.g., low mapping, incomplete reference coverage)
 
 **It is not intended for biological interpretation or downstream publication.**
+
+## bowtie_index
+
+A pre-built Bowtie2 index generated from 3–4 MAGs is now available in the Day 1 repository (link below). This allows you to skip the indexing step and directly run the mapping workflow.
